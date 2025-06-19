@@ -1,0 +1,275 @@
+/* Общие стили тела страницы */
+body {
+    font-family: sans-serif; /* Шрифт без засечек */
+    margin: 0; /* Убираем поля по умолчанию */
+    padding: 0; /* Убираем внутренние отступы */
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333; /* Цвет текста по умолчанию */
+}
+
+/* Обертка секции с фоном и анимациями */
+.hero {
+    position: relative; /* Для позиционирования анимированных кругов внутри */
+    height: 500px; /* Высота секции */
+    display: flex; /* Для центрирования содержимого */
+    justify-content: center; /* Центр по горизонтали */
+    align-items: center; /* Центр по вертикали */
+    text-align: center; /* Текст по центру */
+    color: white; /* Цвет текста внутри hero */
+    overflow: hidden; /* Для скрытия элементов, выходящих за рамки */
+}
+
+/* Анимированный градиентный фон в фоне секции hero */
+.gradient-background {
+    position: absolute; /* Располагается в фоне */
+    top: 0; /* По верхнему краю */
+    left: 0; /* По левому краю */
+    width: 100%; /* На всю ширину */
+    height: 100%; /* На всю высоту */
+    background: linear-gradient(45deg, #ec6b89, #FF4B2B, blue); /* Градиент из трех цветов */
+    background-size: 400% 400%; /* Размер фона для анимации */
+    animation: gradientAnimation 15s infinite alternate; /* Анимация градиента */
+    z-index: -1; /* За содержимым, чтобы не перекрывать текст */
+    display: flex;
+    flex-direction: column; /* Расположение по колонкам (если нужно) */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+}
+
+/* Определение анимации смены градиента */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Начало с левой стороны */
+    }
+    100% {
+        background-position: 100% 50%; /* Конец с правой стороны */
+    }
+}
+
+/* Анимированные круги, создающие эффект свечения и размытости */
+.circle {
+    position: absolute; /* Расположение внутри hero */
+    background-color: rgba(255, 255, 0, 0.3); /* Желтый с прозрачностью */
+    border-radius: 50%; /* Круглая форма */
+    filter: blur(20px); /* Размытие для мягкого свечения */
+    animation: pulse 3s infinite alternate; /* Анимация пульсации */
+}
+
+/* Размер и позиционирование каждого круга */
+.circle-1 {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 10%;
+}
+.circle-2 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    right: 15%;
+}
+.circle-3 {
+    width: 200px;
+    height: 200px;
+    bottom: 20%;
+    left: 25%;
+}
+.circle-4 {
+    width: 120px;
+    height: 120px;
+    bottom: 30%;
+    right: 10%;
+}
+
+/* Анимация пульсации кругов — изменение масштаба */
+@keyframes pulse {
+    0% {
+        transform: scale(0.9); /* Немного уменьшить */
+    }
+    100% {
+        transform: scale(1.1); /* Немного увеличить */
+    }
+}
+
+/* Заголовок внутри hero */
+
+h1 {
+    font-size: 3em; /* Размер шрифта */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex; /* В ряд */
+    justify-content: center; /* Центрировать по горизонтали */
+    gap: 20px; /* Расстояние между кнопками */
+}
+
+/* Стиль каждой кнопки */
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Внутренние отступы */
+    background-color: #ffffff; /* Светлый фон */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    text-decoration: none; /* Без подчёркивания */
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color-0.3s ease; /* Плавное изменение фона при наведении */
+}
+/* При наведении на кнопку меняется цвет фона */
+.button:hover {
+    background-color: #555;
+}
+
+/* Общие стили для секций */
+.section {
+    padding: 40px; /* Отступы внутри */
+    text-align: center; /* Центрировать текст */
+}
+
+/* Блок "Об этом мне" с изображением и текстом */
+.about-content {
+    display: flex; /* В ряд */
+    align-items: center; /* По вертикали */
+    justify-content: center; /* В центр */
+    gap: 40px; /* Расстояние между элементами */
+}
+
+/* Аватар (фото) */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Круг */
+    object-fit: cover; /* Обрезка по размеру */
+}
+
+/* Макет портфолио: сетка из 3 колонок */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три равных столбца */
+    gap: 20px; /* Отступы между карточками */
+    margin-top: 20px; /* Верхний отступ */
+}
+
+/* Обертка отдельной карточки */
+.portfolio-item {
+    perspective: 1000px; /* Задает точку обзора для 3D при перевороте */
+}
+
+/* Внутренний контейнер карточки, который будет вращаться */
+.card {
+    width: 250px;
+    height: 300px;
+    position: relative; /* Для абсолютного позиционирования сторон */
+    transform-style: preserve-3d; /* Позволяет накладывать 3D трансформации */
+    transition: transform 0.8s; /* Плавный эффект вращения */
+    margin: 30px; /* Внутренние отступы */
+}
+
+/* Элемент, содержащий обе стороны карточки и вращающийся */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Для абсолютных сторон */
+    transition: transform 0.8s; /* Плавное вращение */
+    transform-style: preserve-3d; /* Для 3D */
+}
+
+/* Передняя сторона карточки */
+.card-front {
+    position: absolute; /* Абсолютное позиционирование внутри .card-inner */
+    width: 100%; /* На всю ширину */
+    height: 100%; /* На всю высоту */
+    backface-visibility: hidden; /* Скрывать заднюю сторону при вращении */
+    background-color: #3498db; /* Цвет фона */
+    display: flex; /* Для центрирования содержимого */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: white; /* Цвет текста */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Корректный расчет размеров */
+}
+
+/* Задняя сторона карточки, повернута на 180 градусов по Y */
+.card-back {
+    position: absolute; /* Позиционирование внутри .card-inner */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Не показывать заднюю при вращении */
+    background-color: #2980b9; /* Цвет фона задней стороны */
+    transform: rotateY(180deg); /* Поворот вокруг вертикальной оси */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Вращение внутреннего блока при наведении — эффект переворота */
+.card-inner:hover {
+    transform: rotateY(180deg); /* Вращение на 180°, чтобы показать заднюю сторону */
+}
+
+/* Контейнер для контактов */
+.contact-container {
+    display: flex; /* В ряд */
+    justify-content: center; /* Центрование */
+    gap: 40px; /* Расстояние между блоками */
+}
+
+.cards {
+    display: flex; /* Для размещения карточек контактов */
+}
+
+.contact-info {
+    text-align: left; /* Выровнять текст по левому краю */
+}
+
+/* Форма для обратной связи */
+.contact-form {
+    display: flex; /* В колонку */
+    flex-direction: column;
+    gap: 10px; /* Между полями */
+    width: 300px; /* Ширина формы */
+}
+
+/* Поля ввода и textarea */
+.contact-form input, .contact-form textarea {
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 5px; /* Скругление углов */
+}
+
+/* Кнопка отправки */
+.contact-form button {
+    padding: 10px 20px; /* Размеры */
+    background-color: #333; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Скругление */
+    cursor: pointer; /* Стиль курсора */
+}
+
+/* При наведении — изменение цвета кнопки */
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Элементы по вертикали */
+    }
+    /* Меняет сетку портфолио на один столбец на мобильных */
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* Контакты — вертикальный стек */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

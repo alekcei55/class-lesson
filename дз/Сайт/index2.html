@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-разработчик</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="gradient-background">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+
+            <h1>Привет, я веб-разработчик!</h1>
+
+            <div class="button-container">
+                <a href="#about" class="button">Обо мне</a>
+                <a href="#achievements" class="button">Достижения</a>
+                <a href="#portfolio" class="button">Портфолио</a>
+            </div>
+        </div>
+    </header>
+
+     <section id="about">
+        <h2>Обо мне</h2>
+         <div class="avatar"><img src="https://yandex.ru/images/search?cbir_id=1599775%2FCyQHb8LdrRV4VzrBiZWXYg1117&pos=8&rpt=imageview&img_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDSup7fB-rhU%2Fmaxresdefault.jpg%3Fsqp%3D-oaymwEoCIAKENAF8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYZSBVKE4wDw%3D%3D%26amp%3Brs%3DAOn4CLBOUjVVR7thHsJyQDl
+          KDOslEOqhXg&lr=66&cbir_page=similar&url=https%3A%2F%2Favatars.mds.yandex.net%2Fget-images-cbir%2F1599775%2FCyQHb8LdrRV4VzrBiZWXYg1117%2Forig" alt=""></div>
+       </div>
+        <div class="achievements">я начал изучать Html,CSS, и скоро начну изучать верстку сайтов</div>
+    </section>
+
+    <section id="achievements" class="section">
+        <h2>Достижения</h2>
+        <p>пока ничего</p>
+    </section>
+
+   
+ <section id="portfolio">
+        <h2>Портфолио</h2>
+        <div class="cards">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">Моя веб страница </div>
+                <div class="card-back"> это мой самый первый проект в нем я создал 6 страниц о себе и своей жизни</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">Практическая работа</div>
+                <div class="card-back">это та работа о которой я сейчас пишу</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">пока ничего нет</div>
+                <div class="card-back">пасхалка гугугага</div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Связаться со мной</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><strong>Email:</strong> a16227420@gmail.com</p>
+                <p><strong>Телефон:</strong></p>+7 (900) 676 40 13
+                <p><strong>Местоположение:</strong> Омск, Россия</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Сообщение" rows="4" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

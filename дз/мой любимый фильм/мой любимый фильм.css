@@ -1,0 +1,34 @@
+body {
+    background-color: #f0f0f0; /* Фоновый цвет страницы */
+    color: #000000; /* Цвет текста */
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #670cef; /* Цвет заголовка */
+}
+h2 {
+    color: #3386d9; /* Цвет подзаголовка */
+}
+img {
+    border: 2px solid #2980b9; /* Граница изображения */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Тень для изображения */
+    max-width: 100%; /* Адаптивность изображения */
+}
+.review {
+    border: 1px solid #bdc3c7; /* Граница секции с отзывами */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Тень для секции с отзывами */
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ffffff; /* Фоновый цвет секции с отзывами */
+}
+button {
+    background-color: #2980b9; /* Фоновый цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #3498db; /* Цвет кнопки при наведении */
+}

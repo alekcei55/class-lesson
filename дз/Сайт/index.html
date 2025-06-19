@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привет, я веб разработчик!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="content">
+            <h1>Привет, я веб разработчик!</h1>
+            <div class="buttons">
+                <a href="#about" class="button">Обо мне</a>
+                <a href="#portfolio" class="button">Портфолио</a>
+                <a href="#contact" class="button">контакты</a>
+            </div>
+        </div>
+    </div>
+
+   <section id="about">
+        <h2>Обо мне</h2>
+         <div class="avatar"><img src="https://yandex.ru/images/search?cbir_id=1599775%2FCyQHb8LdrRV4VzrBiZWXYg1117&pos=8&rpt=imageview&img_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDSup7fB-rhU%2Fmaxresdefault.jpg%3Fsqp%3D-oaymwEoCIAKENAF8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYZSBVKE4wDw%3D%3D%26amp%3Brs%3DAOn4CLBOUjVVR7thHsJyQDl
+          KDOslEOqhXg&lr=66&cbir_page=similar&url=https%3A%2F%2Favatars.mds.yandex.net%2Fget-images-cbir%2F1599775%2FCyQHb8LdrRV4VzrBiZWXYg1117%2Forig" alt=""></div>
+       </div>
+        <div class="achievements">я начал изучать Html,CSS, и скоро начну изучать верстку сайтов</div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Портфолио</h2>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">Моя веб страница </div>
+                <div class="card-back"> это мой самый первый проект в нем я создал 6 страниц о себе и своей жизни</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">Практическая работа</div>
+                <div class="card-back">это та работа о которой я сейчас пишу</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">пока ничего нет</div>
+                <div class="card-back">пасхалка гугугага</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Связаться со мной</h2>
+        <p>Почта: a16227420@gmail.com</p>
+        <p>Телефон: +79006764013</p>
+        <p>Местоположение: Омск, Россия</p>
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш Email" required>
+            <textarea placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+ body {
+    h3,h4 {
+        color: #ff0000;
+    }
+}
+.wish-list {
+    border-top: 2px solid #420bdb;
+    border-bottom: 2px solid #0800fd;
+}
+.wish {
+    font-size: 16pt;
+    margin: 10px 0;
+}
+.task-list {
+    margin-top: 20px;
+}
+.task {
+    background-color: #0080ff63;
+    margin: 10px 0;
+}
+.task:nth-child(2n) {
+    border-left: 2px solid #ea1498;
+}
+.important {
+    color: rgb(18, 255, 247); /* Выделение важного слова */
+}
+.fastest {
+    border: 2px solid rgb(21, 0, 255); /* Рамка для самого быстрого желания */
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    color: darkblue;
+}
+li:hover {
+    background-color: #f50a0a; /* Цвет фона при наведении на пункты списка */
+}
+div {
+    height: 200px;
+    background: linear-gradient(45deg, deeppink, yellow,lime);  }

@@ -1,0 +1,55 @@
+ body {
+   background-image: url('https://avatars.mds.yandex.net/i?id=71c9b22c0a9eee9cc581b0dd4b975d5be705a74b-7051630-images-thumbs&n=13');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   text-shadow: 2px 1px 10px #000000;
+ }
+ .p1 {
+   color: #ff0000; /* цвет  текста */
+   background-color: rgba(15, 188, 227, 0.559); /* цвет фона */ 
+   width: 999px; /* ширина  */
+   height: 300px; /* высота  */
+   text-align: center;/* выравнивание текста по правому краю  */
+   font-size: 14px;/*размер шрифта*/
+   font-family: "Roboto", sans-serif;/*начертание шрифта*/
+   border: 2px solid rgb(255, 200, 0);/*рамка: толщина линии,тип линии,сплошн,пунктирная и тп,цвет*/
+   border-radius: 20px;
+   padding: 50px;
+   margin-top: 50px;    
+}
+.p2 {
+   color: aquamarine;
+   text-align: right;
+   font-size: 14pt;
+   font-weight: 900;/*жирность шрифта*/
+   font-style: italic;/*курсив*/
+   border-bottom: 2px dotted #457585;
+   border-right: 5px dashed #ff0000;
+   border-top:  15px double #ff00ff;
+   border-left: 7px solid #45758695;
+   box-shadow: 2px 3px 40px 5px #fb0000;/*тень блока:сдвиг по xсдвиг по y,размытие,цвет,размер */
+   padding: 50px 100px; 
+   margin-right: 50px 100px;
+}
+.p3 {
+   text-align: justify;/* выравнивание текста по ширине  */
+   font-size: 140%;
+   text-transform: uppercase;/*все буквы заглавные*/
+    line-height: 40px;/*высота строки*/
+    background-color: darkkhaki;
+    padding: 50px 100px 150px 200px;
+    margin-left: 50px 100px 150px 200px;
+    }
+.p4{
+   font-size: 4em;
+   background-color: magenta  ;
+   padding-left: 25px;
+   padding-bottom: 30px;
+   padding-right: 50px;
+   padding-top: 80px;
+   margin-left: 25px;
+   margin-bottom: 30px;
+   margin-right: 50px;
+   margin-top: 80px;
+}  
