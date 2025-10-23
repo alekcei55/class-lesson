@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Двигающийся цветной кубик</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #1ddbed;
+  }
+
+  #cube {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 8px;
+    /* Для более привлекательного вида */
+    box-shadow: 0 4px 20px rgba(0, 227, 252, 0.3);
+    cursor: pointer;
+    /* Для плавных переходов */
+    transition: background-color 0.5s;
+  }
+</style>
+</head>
+<body>
+
+<div id="cube"></div>
+
+<script>
+  const cube = document.getElementById('cube');
+  const speed = 2; // скорость движения в пикселях в кадр
+  let posX = Math.random() * (window.innerWidth - 50);
+  let posY = Math.random() * (window.innerHeight - 50);
+  let velX = (Math.random() < 0.5 ? -10 : 10) * speed;
+  let velY = (Math.random() < 0.5 ? -10 : 10) * speed;
+
+  // Изначально задаем позицию
+  cube.style.left = posX + 'px';
+  cube.style.top = posY + 'px';
+
+  function getRandomColor() {
+    const r = Math.floor(Math.random() * 230);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 250);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+
+  function animate() {
+    // Обновляем позицию
+    posX += velX;
+    posY += velY;
+
+    // Проверка границ по горизонтали
+    if (posX <= 0 || posX >= window.innerWidth - 50) {
+      velX = -velX;
+      cube.style.backgroundColor = getRandomColor();
+    }
+
+    // Проверка границ по вертикали
+    if (posY <= 0 || posY >= window.innerHeight - 50) {
+      velY = -velY;
+      cube.style.backgroundColor = getRandomColor();
+    }
+
+    // Обновляем позицию кубика
+    cube.style.left = posX + 'px';
+    cube.style.top = posY + 'px';
+
+    requestAnimationFrame(animate);
+  }
+
+  // Запускаем анимацию
+  animate();
+
+  // Обновление границ при изменении размера окна
+  window.addEventListener('resize', () => {
+    // Можно дополнительно обработать, если нужно, например, скорректировать позицию
+  });
+</script>
+
+</body>
+</html>

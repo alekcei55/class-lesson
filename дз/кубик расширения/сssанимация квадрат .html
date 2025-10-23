@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 1;
+            background-color: #ffffff;
+        }
+        .animated-button {
+            width: 100px;
+            height: 100px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 1px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            animation: scaleRotate 2s infinite;
+        }
+        @keyframes scaleRotate {
+            0% {
+                transform: scale(10) rotate(0deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(-180deg);
+            }
+            100% {
+                transform: scale(10) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="animated-button">ааааа</button>
+</body>
+</html>

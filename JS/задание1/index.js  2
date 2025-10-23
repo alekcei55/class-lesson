@@ -1,0 +1,18 @@
+let diceRoll = Math.floor(Math.random() * 20) + 1;
+console.log("Вы выбросили: " + diceRoll);
+let npcName = "Старый Мудрец";
+let playerName = prompt("Как тебя зовут, путник?");
+let questItem = "древний артефакт";
+
+alert("Приветствую, " + playerName + ". Я, " + npcName + ", поручаю тебе найти " + questItem + ".");
+let basePower = 40;
+
+let fireballPower = basePower * 3;
+let healPower = basePower + 15;
+let invisibilityPower = basePower / 2;
+
+console.log("Заклинание | Сила");
+console.log("-----------|-------");
+console.log("Огненный шар | " + fireballPower);
+console.log("Исцеление  | " + healPower);
+console.log("Невидимость | " + invisibilityPower);
