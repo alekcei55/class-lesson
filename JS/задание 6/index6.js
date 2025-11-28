@@ -1,62 +1,72 @@
-const treasureChests = [
+const deer = [
   [10, 20, 15],
   [5, 8, 12],
   [25, 30, 10]
 ];
+ 
+let totalDeer = 0;
 
-let totalGold=0
-for (let i=0; i<treasureChests.length; i++)  {
-const row = treasureChests[i];
-for (let j = 0; j < row.length; j++) {
-totalGold += row[j];
- }
-}
-
-console.log(totalGold);
-
-  const crystalsMap = [
-  ["1", "0", "1"],
-  ["0", "1", "0"],
-  ["1", "0", "1"]
-];//1-кристалл;0-пусто//
-
-let crystalCount=0;
-for (let i=0; i<crystalsMap.length; i++)  {
-  const row =crystalsMapS=[i]  ;
-for (let j = 0; j < row.length; j++) {
-    if (row[j] === "кристалл") { 
-crystalCount++;
-}
-}
-}
-console.log(crystalCount);
-
-const cityTemperatures = [
-  [15, 18, 20],
-  [22, 25, 19],
-  [10, 12, 14]
-];
-
-function averageTemperature(cityData) {
-  let sum = 0;
-  for (let temp of cityData) {
-sum=+ temp
+for (let i = 0; i < deer.length; i++) {
+  const element = deer[i];
+  for (let k = 0; k < element.length; k++) {
+    totalDeer += deer[i][k]
   }
-return Math.round(sum/cityData.length*10) / 10; 
+}
+console.log(totalDeer)
+
+
+
+const dood =[ 
+  ["кристалл", "пусто", "кристалл"],
+  ["пусто", "кристалл", "пусто"],
+  ["кристалл", "пусто", "кристалл"]
+]
+let totalDood = 0;
+
+for (let i = 0; i < dood.length; i++) {
+  const element = dood[i];
+  for (let l = 0; l < element.length; l++) {
+   if (dood[i][l] ==='кристалл'){
+    totalDood ++
+   }
+  }
+}
+console.log(totalDood)
+
+
+const lool =[
+  [15, 18, 20], // Город 1: температура за 3 дня
+  [22, 25, 19], // Город 2: температура за 3 дня
+  [10, 12, 14]  // Город 3: температура за 3 дня
+]
+
+totalLool=0
+
+const cities=['0','1','2']
+
+for (let i = 0; i < lool.length; i++) {
+  const element = lool[i];
+  for (let h = 0; h < element.length; h++) {
+    totalLool += lool[i][h]
+  }
+cool=totalLool/lool.length
+console.log(cool)
 }
 
-const citiesAverages = [
- [15,18,20],
- [22,25,19],
- [10,12,14]
-];
 
-for (let i = 0; i < cityTemperatures.length; i++) {
-  const avgTemp = averageTemperature(cityTemperatures[i]);
-  citiesAverages.push(`Город ${i + 1}: ${avgTemp}°`);
-}
 
-console.log(citiesAverages.join(", "));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
