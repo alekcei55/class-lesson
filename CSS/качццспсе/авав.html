@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Освоение Омской крепости и ее влияние на освоение Сибири</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f5f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1513326738677-b964603b136d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0 80px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin: 25px 0 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .image-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-caption {
+            padding: 15px;
+            background-color: #f9f9f9;
+            font-style: italic;
+            color: #555;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #e74c3c;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            margin-right: auto;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: auto;
+            margin-right: 0;
+            padding-left: 40px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .timeline-item:nth-child(odd):after {
+            content: '';
+            position: absolute;
+            right: -12px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(even):after {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+        }
+
+        .influence-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .influence-item {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .influence-item i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #555;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .quote:before, .quote:after {
+            content: '"';
+            font-size: 3rem;
+            color: #e74c3c;
+            opacity: 0.5;
+            position: absolute;
+        }
+
+        .quote:before {
+            top: 10px;
+            left: 20px;
+        }
+
+        .quote:after {
+            bottom: 10px;
+            right: 20px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .map-container {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .map-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .website-purpose {
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            margin-top: 60px;
+            padding: 40px;
+        }
+
+        .website-purpose h2 {
+            color: white;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .purpose-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .purpose-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+            transition: transform 0.3s ease;
+        }
+
+        .purpose-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .purpose-item i {
+            font-size: 2rem;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px !important;
+                padding-right: 0 !important;
+            }
+            
+            .timeline-item:nth-child(odd):after,
+            .timeline-item:nth-child(even):after {
+                left: 20px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Освоение Омской крепости</h1>
+            <p class="subtitle">Историческая роль Омской крепости в освоении Сибири и формировании российского государства на восточных рубежах</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Историческое значение Омской крепости</h2>
+            <p>Омская крепость, основанная в 1716 году, стала важнейшим опорным пунктом Российской империи в ходе освоения Сибири. Расположенная при впадении реки Омь в Иртыш, она служила не только военным форпостом, но и центром торговли, культуры и административного управления обширными территориями.</p>
+            
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Omskaya_krepost.jpg/800px-Omskaya_krepost.jpg" alt="Реконструкция Омской крепости">
+                    <div class="image-caption">Реконструкция Омской крепости XVIII века</div>
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Иртыш и Омь - место основания крепости">
+                    <div class="image-caption">Место слияния рек Иртыш и Омь - стратегическая точка основания крепости</div>
+                </div>
+                <div class="image-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Map_of_Siberia_%281742%29.jpg/800px-Map_of_Siberia_%281742%29.jpg" alt="Карта Сибири XVIII века">
+                    <div class="image-caption">Карта Сибири XVIII века с обозначением Омской крепости</div>
+                </div>
+            </div>
+            
+            <p>Крепость обеспечивала безопасность торговых путей, способствовала развитию земледелия в регионе и стала отправной точкой для дальнейших экспедиций вглубь Сибири и на Дальний Восток. Благодаря своему стратегическому положению, Омск превратился в "ворота Сибири", через которые происходило движение людей, товаров и идей.</p>
+        </section>
+
+        <section class="section">
+            <h2>Хронология освоения</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1716 год</div>
+                    <div class="timeline-content">
+                        <h3>Основание крепости</h3>
+                        <p>Подполковник Иван Бухгольц по приказу Петра I закладывает первую Омскую крепость на левом берегу Оми. Это событие стало отправной точкой в систематическом освоении юга Западной Сибири.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">1768-1771 годы</div>
+                    <div class="timeline-content">
+                        <h3>Строительство новой крепости</h3>
+                        <p>По проекту инженера Малова строится новая, более мощная крепость на правом берегу Оми. Она становится одной из самых современных fortifications в Сибири.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">1782 год</div>
+                    <div class="timeline-content">
+                        <h3>Получение статуса города</h3>
+                        <p>Омская крепость получает статус города, что подтверждает ее административное и экономическое значение в регионе.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">XIX век</div>
+                    <div class="timeline-content">
+                        <h3>Центр Западно-Сибирского генерал-губернаторства</h3>
+                        <p>Омск становится столицей Западно-Сибирского генерал-губернаторства, что превращает город в важнейший политический центр Сибири.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Влияние на освоение Сибири</h2>
+            <p>Омская крепость сыграла ключевую роль в процессе интеграции сибирских земель в состав Российского государства. Ее влияние проявлялось в нескольких направлениях:</p>
+            
+            <div class="influence-list">
+                <div class="influence-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Военно-стратегическое</h3>
+                    <p>Обеспечение безопасности южных границ российских владений в Сибири, защита от набегов кочевников и создание плацдарма для дальнейшей экспансии.</p>
+                </div>
+                
+                <div class="influence-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Торгово-экономическое</h3>
+                    <p>Стимулирование развития торговых путей, создание инфраструктуры для товарообмена между европейской частью России, Сибирью и Центральной Азией.</p>
+                </div>
+                
+                <div class="influence-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Демографическое</h3>
+                    <p>Привлечение переселенцев из центральных губерний, способствование заселению плодородных земель юга Западной Сибири.</p>
+                </div>
+                
+                <div class="influence-item">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Административное</h3>
+                    <p>Формирование системы управления обширными территориями, создание модели колониальной администрации, адаптированной к сибирским условиям.</p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "Омская крепость стала не просто военным укреплением, а точкой кристаллизации российской государственности в Сибири, вокруг которой формировался новый регион империи."
+            </div>
+            
+            <div class="map-container">
+                <h3>Карта влияния Омской крепости на освоение Сибири</h3>
+                <img src="C:\Users\a1622\Downloads\i (1).jpeg" alt="Карта влияния Омской крепости">
+                <p class="image-caption">Основные направления влияния Омской крепости на освоение сибирских территорий</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Наследие Омской крепости</h2>
+            <p>Сегодня Омск - крупный промышленный, научный и культурный центр Сибири, чье развитие началось с небольшой крепости на слиянии двух рек. Сохранившиеся здания крепости являются памятниками федерального значения и популярными туристическими объектами.</p>
+            
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="C:\Users\a1622\Downloads\faf4aefa360eb7225f86de9c6cbb0a1d.jpg" alt="Современный Омск">
+                    <div class="image-caption">Современный Омск - город, выросший из крепости</div>
+                </div>
+                <div class="image-card">
+                    <img src="C:\Users\a1622\Downloads\news-image-vm5Ymu9paprtCzKb065hmvjyOzUIN8.jpg" alt="Макет Омской крепости">
+                    <div class="image-caption">Макет Омской крепости в музее</div>
+                </div>
+            </div>
+            
+            <p>Омская крепость стала символом российского продвижения на восток, примером успешного сочетания военной, административной и колонизационной политики. Ее история иллюстрирует процесс превращения форпоста в город, а затем в крупный региональный центр, что характерно для многих сибирских городов.</p>
+            
+            <h3>Ключевые выводы:</h3>
+            <ul style="padding-left: 20px; margin-top: 15px;">
+                <li>Омская крепость была важнейшим стратегическим пунктом в системе обороны и освоения Сибири</li>
+                <li>Крепость способствовала экономическому развитию региона и становлению торговых путей</li>
+                <li>Она стала центром притяжения переселенцев и основой для формирования многонационального сообщества</li>
+                <li>Административные функции крепости заложили основы системы управления сибирскими территориями</li>
+                <li>Историческое наследие крепости продолжает влиять на идентичность Омска и всего региона</li>
+            </ul>
+        </section>
+
+        <section class="section website-purpose">
+            <h2>О создании этого сайта</h2>
+            <p>Данный сайт был создан для сохранения исторической памяти и популяризации знаний о важнейшем этапе освоения Сибири - основании и развитии Омской крепости. Как автор, я стремился создать информативный и визуально привлекательный ресурс, который поможет современным людям понять значение этого исторического события.</p>
+            
+            <div class="purpose-list">
+                <div class="purpose-item">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Цели создания сайта</h3>
+                    <p>Создать доступный образовательный ресурс об истории Сибири, визуализировать исторические данные, способствовать сохранению исторической памяти.</p>
+                </div>
+                
+                <div class="purpose-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Образовательная ценность</h3>
+                    <p>Сайт предоставляет структурированную информацию, хронологию событий и анализ влияния Омской крепости на освоение Сибири.</p>
+                </div>
+                
+                <div class="purpose-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Для кого предназначен</h3>
+                    <p>Для школьников, студентов, преподавателей истории, краеведов и всех, кто интересуется историей России и Сибири.</p>
+                </div>
+                
+                <div class="purpose-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Польза и значимость</h3>
+                    <p>Способствует пониманию исторических процессов, формированию патриотизма, сохранению культурного наследия и развитию интереса к истории родного края.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 1.2rem; text-align: center;">
+                <i class="fas fa-quote-left" style="color: #e74c3c; margin-right: 10px;"></i>
+                История - это не просто сведения о прошлом, это ключ к пониманию настоящего и основа для построения будущего
+                <i class="fas fa-quote-right" style="color: #e74c3c; margin-left: 10px;"></i>
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <h3 style="color: white; margin-bottom: 20px;">Освоение Омской крепости и ее влияние на освоение Сибири</h3>
+            <p>Исторический образовательный проект</p>
+            <p>© 2023 Все права защищены. Материалы предназначены для образовательных целей.</p>
+            <p style="margin-top: 20px; font-size: 0.9rem;">Использованы исторические данные и изображения, иллюстрирующие тему освоения Сибири</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">Сайт создан в образовательных целях для популяризации исторических знаний</p>
+        </div>
+    </footer>
+</body>
+</html>
