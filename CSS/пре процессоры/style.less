@@ -1,0 +1,38 @@
+@primary-color: rgba(2, 136, 116, 0.942);
+@second-color: rgb(0, 0, 0) ;
+@background-color: #1adc71 ;
+
+@main-font:"Arial",sans-serif ;
+    
+.flex_align(@align_horiz: center) {
+   display: flex;
+justify-content: @align_horiz;
+align-items: center; 
+}
+header {
+    .flex_align(spase-around);
+background-color: @background-color ;
+ul {
+list-style:none ;
+display: flex;
+li {
+    margin: 0 10px;
+    a {
+text-decoration: none;
+font-family: @main-font;
+color: @second-color;
+font-weight: 700;
+&:hover {
+    color: @primary-color;
+}
+}
+}
+} 
+.social {
+    a {
+    text-decoration:none ;
+margin: 0 15px;
+color: @primary-color;
+}
+}
+}

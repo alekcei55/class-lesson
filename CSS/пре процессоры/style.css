@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: spase-around;
+  align-items: center;
+  background-color: #1adc71;
+}
+header ul {
+  list-style: none ;
+  display: flex;
+}
+header ul li {
+  margin: 0 10px;
+}
+header ul li a {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  color: #000000;
+  font-weight: 700;
+}
+header ul li a:hover {
+  color: rgba(2, 136, 116, 0.942);
+}
+header .social a {
+  text-decoration: none ;
+  margin: 0 15px;
+  color: rgba(2, 136, 116, 0.942);
+}
