@@ -291,3 +291,134 @@ console.log(calculator('subtract', 14232356, 14789)); // Результат: 2
 console.log(calculator('multiply', 2, 3, 4)); // Результат: 24
 console.log(calculator('divide', 8, 2, 2)); // Результат: 2
 console.log(calculator('average', 1, 2, 3, 4)); // Результат: 2.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="nav">
+        <ul class="nav__mainmenu">
+            <li class="nav__item"><a href="#catalog" class="nav__link">
+                <img src="src/images/" alt="Каталог" class="nav__icon">
+            </a></li>
+            <li class="nav__item"><a href="#stocks" class="nav__link">
+                <img src="src/images/" alt="Акции" class="nav__icon">
+            </a></li>
+            <li class="nav__item"><a href="#catalog" class="nav__link">
+                <img src="src/images/" alt="Каталог" class="nav__icon">
+            </a></li>
+
+        </ul>
+    </nav>

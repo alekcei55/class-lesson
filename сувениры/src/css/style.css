@@ -374,6 +374,9 @@ text-transform: uppercase;
     background-clip: text;
     text-fill-color: transparent;
 } 
+.getcatalog{
+    margin-bottom: 96px;
+}
 .getcatalog__content{
     border-radius: 8px;
     background: rgba(248, 248, 248, 1);
