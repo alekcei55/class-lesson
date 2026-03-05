@@ -637,10 +637,14 @@ margin-bottom: 13px;
 }
 .pricelist{
    display: flex;
-
+   max-width: 1347px;
+   margin: 0 auto;
+   background: #F8F8F8 ;
+   align-items: center;
 }
 .pricelist__text{
 width: 50%;
+margin: 47px;
 }
 .pricelist__title{
 font-family: Montserrat;
