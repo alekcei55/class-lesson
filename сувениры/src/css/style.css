@@ -137,6 +137,41 @@ text-transform: uppercase;
 border-radius: 2px;
 background:  rgba(122, 76, 217, 1);
 }
+.header__cart-count{
+width: 16px;
+height: 16px;
+border-radius: 50%;
+background: #7A4CD9;
+display: flex;
+justify-content: center;
+align-items: center;
+color:#fff;
+font-family: Montserrat;
+font-weight: 400px;
+font-size: 10px;
+line-height: 16px;
+position: absolute;
+top: -8px;
+right: -8px;
+}
+.header__cart{
+position:relative;
+display: none;
+}
+.header__gam-line{
+width: 16px;
+height: 2px;
+border-radius: 1px;
+background: #000;
+margin-bottom: 3px;
+}
+.header__gam-line--short{
+width: 10px;
+}
+.header__gam{
+display: none;
+margin-right: 22px;
+}
 .navigation{
 background: rgba(122, 76, 217, 1);
 padding: 17px 0;
@@ -927,6 +962,9 @@ margin-right: 66px;
     .header__search{
         width: 50px;
         height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .header__input-search{
         display: none;
@@ -964,7 +1002,55 @@ margin-right: 66px;
         transform: translate(-220px, -111px); 
     }
 }
+@media(max-width:540px) {
+    .header__city{
+        display: none;
+    }
+    .header__contacts{
+        display: none;
+    }
+    .header__cart{
+        display: flex;
+    }
+    .header__gam{
+        display: block;
+    }
+    .header__logo{
+        margin-right: auto;
+    }
+    .navigation{
+        display: none;
+    }
+    .home__image{
+        display: none;
+    }
+    .home__lines{
+        display: none;
+    }
+    .home__callback{
+        display: none;
+    }
+    .home__content{
+        width: 100%;
+        padding: 0 25px;
+    }
+    .home__name{
+        display: none;
+    }
+    .home__offer{
+        text-align: center;
+    }
+    .home__action{
+        text-align: center;
+    }
+    .home{
+        padding: 49px 0;
+        background: url('../images/BG mobail.png');
+        background-position: -270px top;
+        background-size: auto 120%;
+    }
 
+}
 
 
 
