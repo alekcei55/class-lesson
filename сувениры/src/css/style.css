@@ -198,6 +198,28 @@ margin: 0 38px;
 .navigation__link-icon{
 margin-right: 6px;
 }
+    .navigation-mobile{
+        background-color: #7A4CD9;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: none;
+    }
+    .navigation-mobile__close{
+        color: #fff;
+        font-size: 32pt;
+        font-weight: 700;
+        font-family: Montserrat;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+    .navigation-mobile__menu{
+        margin-top: 120px;
+    }
 .home {
     background-image:url("../images/banner bez zencina.png") ;
     background-repeat: no-repeat;
@@ -1021,6 +1043,8 @@ margin-right: 66px;
     .navigation{
         display: none;
     }
+
+
     .home__image{
         display: none;
     }
@@ -1028,11 +1052,14 @@ margin-right: 66px;
         display: none;
     }
     .home__callback{
-        display: none;
+        margin-top: 75px;
+        width: 100%;
+
     }
     .home__content{
         width: 100%;
         padding: 0 25px;
+        margin: auto;
     }
     .home__name{
         display: none;
@@ -1048,10 +1075,165 @@ margin-right: 66px;
         background: url('../images/BG mobail.png');
         background-position: -270px top;
         background-size: auto 120%;
+        height: 360px;
+        align-items: flex-start;
+        overflow: visible;
+        margin-bottom: 263px;
+
+    }
+    .catalog__allcatalog-link{
+        display: none;
+    }
+    .catalog__grid-link{
+        display: none;
+    }
+    .catalog__grid-item{
+        flex-direction: column;
+        text-align: center;
+    }
+    .catalog__grid-name{
+        text-align: center;
+    }
+    .getcatolog__content{
+        overflow: hidden;
+        padding: 50px 23px 50px 23px;
+    }
+    .getcatolog__text{
+        width: 100%;
+        z-index: 1;
+    }
+    .getcatolog__button{
+        margin: 164px auto 0 auto;
+
+    }
+    .getpens__image{
+        width: 100%;
+        bottom: -50px;
+    }
+    .longbanner{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 32px 72px;
+    }
+    .longbanner__item{
+        margin-bottom: 32px;
+    }
+    .longbanner__image-left{
+        display: none;
+    }
+    .longbanner__image-right{
+        right: -736px;
+    }
+    
+    .navigation__item{
+       padding: 21.5px 16px;
+       border: 1px solid #20202021;
+    }
+    .getpens__grid-content{
+        grid-template-columns: 1fr 1fr;
+    }
+    .getpens__button{
+        display: block;
+        padding: 16px 122.5px 16px 122.5px;
+        font-family: Montserrat;
+        color: #F8F8F8;
+        border-radius: 4px;
+        background: rgba(122, 76, 217, 1);
+        text-align: center;
+    }
+    .getpens__button-content{
+        padding: 20px 16px 40px 16px;
+    }
+    .voproc__content{
+        flex-direction: column;
+        padding: 40px 16px 0px 16px;
+    }
+    .img__block{
+        order: 1;
+        margin-top: 40px;
+        height: 200px;
+    }
+    .voproc__image{
+        height: 261px;
+        font-size: 0px;
+    }
+    .voproc__text{
+        font-family: Montserrat;
+        max-width: 100%
+    }
+    .circle{
+        border-radius: 50%;
+        width: 625px;
+        height: 625px;
+        left: -56px;
+        bottom: -400px;
+    }
+    .vopros__input{
+        max-width: 90%
+    }
+    .voproc__button{
+        height: 50px;
     }
 
 }
-
+@media (max-width:360px) {
+    .home__offer{
+        font-size: 19px;
+        line-height: initial;
+    }
+    .home__action{
+        font-size: 13px;
+        line-height: initial;
+    }
+    .home{
+        height: 238px;
+        background-position: -184px top;
+        margin-bottom: 369px; 
+    }
+    .home__callback{
+        margin-top: 61px;
+    }
+    .home__callback-action{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .home__callback-form{
+        flex-direction: column;
+    }
+    .home__callback-input{
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 18px;
+    }
+    .home__callback-button{
+        width: 100%;
+    }
+    .getcatolog__title{
+        font-size: 19px;
+        line-height: initial;
+    }
+    .getcatolog__description{
+        font-size: 15px;
+        line-height: 25px;  
+    }
+    .getpens__button{
+        font-size: 12px;
+        line-height: initial;
+        padding: 16px 28px;
+        bottom: -33px;
+        right: -34px;
+    }
+    .getcatolog__image{
+        bottom: -33px;
+        right: -34px;
+    }
+    .longbanner__item{
+        width: 128px;
+    }
+    .longbanner{
+        padding: 32px 25px;
+    }
+}
 
 
 
